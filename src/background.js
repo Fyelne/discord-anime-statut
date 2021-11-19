@@ -4,20 +4,19 @@ import AudibleTabTitleTracker from './AudibleTabTitleTracker';
 import DiscordGateway from './DiscordGateway';
 import TokensTracker from './TokensTracker';
 
-const DEEZER_HOSTNAME = 'www.deezer.com';
+const DEEZER_HOSTNAME = 'voiranime.com';
 const DEEZER_TAB_TITLE_DEBOUNCE_DELAY = 3000;
 const TITLE_SEPARATOR = ' - ';
 
 let tokensDiscordGateways = {};
 
-const cleanTitleRegexp = new RegExp(TITLE_SEPARATOR + 'Deezer(?=' + TITLE_SEPARATOR + ')', 'g');
 function formatTabTitle(title) {
   const splitTitle = title.split(TITLE_SEPARATOR);
-  if (splitTitle.length === 3) {
-    return splitTitle[1] + TITLE_SEPARATOR + splitTitle[0] + TITLE_SEPARATOR + splitTitle[2];
-  } else {
-    return title.replace(cleanTitleRegexp, '');
+  let anime_title = splitTitle[0];
+  if (splitTitle.length > 3) {
+    anime_title += ", Episode " + splitTitle[2];
   }
+  return anime_title;
 }
 
 /* Track Deezer playing tab title changes */

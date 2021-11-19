@@ -3,13 +3,13 @@
 
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
-	"version": "0.1.5",
+	"version": "0.1.0",
 
 	"default_locale": "en",
 	"icons": {
-		"16": "discord16.png",
-		"48": "discord48.png",
-		"128": "discord128.png"
+		"16": "duck16.png",
+		"48": "duck48.png",
+		"128": "duck128.png"
 	},
 	"options_page": "options.html",
 	"background": {

@@ -1,10 +1,10 @@
 {
   "appname": {
-    "message": "Deezer Discord Integration",
+    "message": "Discord Anime Statut",
     "description": "The title of the application, displayed in the web store."
   },
   "appdesc": {
-    "message": "This extension allows the user to display Deezer's current playing song in Discord status.",
+    "message": "This extension allows the user to display current playing anime in Discord status.",
     "description": "The description of the application, displayed in the web store."
   },
 

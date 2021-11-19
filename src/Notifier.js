@@ -1,7 +1,7 @@
 import config from './Config';
 
 const EXTENSION_NAME = chrome.i18n.getMessage('appName');
-const ICON_URL = 'discord48.png';
+const ICON_URL = 'duck48.png';
 
 class Notifier {
   notify(message, onClickedCallback) {

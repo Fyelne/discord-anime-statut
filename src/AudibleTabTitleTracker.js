@@ -88,10 +88,11 @@ export default class AudibleTabTitleTracker {
       } else {
         if ('title' in changeInfo) {
           this._tabs[tabId].title = changeInfo.title;
+          this._tabs[tabId].audible = false;
           aTabChanged = true;
         }
         if ('audible' in changeInfo) {
-          this._tabs[tabId].audible = changeInfo.audible;
+          this._tabs[tabId].audible = changeInfo.audible || this._tabs[tabId].audible;
           aTabChanged = true;
         }
       }

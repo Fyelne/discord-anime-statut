@@ -7,7 +7,7 @@ const BROWSER = 'Chrome';
 const DEVICE = chrome.i18n.getMessage('appName');
 
 export default class DiscordGateway {
-  constructor(token, retryDelay = 500, closeDelay = 600000) {
+  constructor(token, retryDelay = 1000, closeDelay = 600000) {
     this._token = token;
     this._retryDelay = retryDelay;
     this._closeDelay = closeDelay;
@@ -96,14 +96,16 @@ export default class DiscordGateway {
     return {
       game: status === null ? null : {
         name: status,
-        type: 2,
+        type: 3,
       },
       status: 'online',
-      since: null,
+      since: Date.now(),
       afk: false,
     };
   }
-  /* Get identify operation payload */
+  /* Get identify operation payload
+  *  - Le statut passe par ici
+  */
   _getOpIdentifyPayload(status) {
     return {
       op: 2,
