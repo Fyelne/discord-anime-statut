@@ -1,2 +1,2 @@
-# discord-deezer-chrome
-['Deezer Discord integration' chrome extension](https://chrome.google.com/webstore/detail/deezer-discord-integratio/gpmnalhimebpjhilkifcaadejhmogaok)
+# discord-anime-statut
+['Discord Anime Statut' chrome extension fork on Deezer Discord Integration](https://chrome.google.com/webstore/detail/deezer-discord-integratio/gpmnalhimebpjhilkifcaadejhmogaok)
