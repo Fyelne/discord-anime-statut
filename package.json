@@ -1,7 +1,7 @@
 {
-  "name": "discord-deezer-chrome",
-  "version": "0.1.5",
-  "description": "This Chrome extension allows the user to display Deezer's current playing song in Discord status.",
+  "name": "discord-anime-statut",
+  "version": "0.2.0",
+  "description": "This extension allows the user to display current playing anime in Discord status.",
   "main": "src/background.js",
   "scripts": {
     "build": "webpack",
@@ -9,27 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AdrienC/discord-deezer-chrome.git"
+    "url": "git+https://github.com/Fyelne/discord-anime-statut"
   },
   "keywords": [
     "Discord",
-    "Deezer",
-    "Chrome"
+    "Anime"
   ],
-  "author": "Adrien Colson",
+  "author": "Fyelne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AdrienC/discord-deezer-chrome/issues"
+    "url": "https://github.com/Fyelne/discord-anime-statut/issues"
   },
-  "homepage": "https://github.com/AdrienC/discord-deezer-chrome#readme",
+  "homepage": "https://github.com/Fyelne/discord-anime-statut#readme",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
     "@babel/plugin-transform-object-rest-spread": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
     "@types/clean-webpack-plugin": "^0.1.3",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.2.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.4.0",
     "file-loader": "^6.2.0",
@@ -38,7 +35,7 @@
     "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
-    "discord-deezer-chrome": "file:",
+    "discord-anime-statut": "file:",
     "material-design-lite": "^1.3.0"
   }
 }
