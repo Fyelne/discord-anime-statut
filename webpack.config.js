@@ -39,4 +39,5 @@ module.exports = {
     minimizer: [new TerserWebpackPlugin()], // Use TerserWebpackPlugin for minification
   },
   devtool: 'source-map',
+  mode: 'production',
 };
