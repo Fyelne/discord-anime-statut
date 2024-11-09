@@ -1,8 +1,7 @@
-const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-//npm run build
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -10,9 +9,12 @@ module.exports = {
     options: path.resolve(__dirname, 'src', 'options.js'),
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new CopyWebpackPlugin(['./assets']),
-    new UglifyJSPlugin(),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './assets', to: './' } 
+      ],
+    }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -25,12 +27,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'es2015'],
-            plugins: [require('babel-plugin-transform-object-rest-spread')],
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-object-rest-spread'],
           },
         },
       },
     ],
   },
+  optimization: {
+    minimize: true, // Enable minimization
+    minimizer: [new TerserWebpackPlugin()], // Use TerserWebpackPlugin for minification
+  },
   devtool: 'source-map',
-}
+};

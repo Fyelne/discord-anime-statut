@@ -1,2 +1,8 @@
-# discord-anime-statut
-['Discord Anime Statut' chrome extension fork on Deezer Discord Integration](https://chrome.google.com/webstore/detail/deezer-discord-integratio/gpmnalhimebpjhilkifcaadejhmogaok)
+# Discord Anime Status
+
+## Build the extension
+
+```sh
+npm i
+npm run build 
+```
