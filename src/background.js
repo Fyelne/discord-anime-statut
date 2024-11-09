@@ -4,7 +4,7 @@ import AudibleTabTitleTracker from './AudibleTabTitleTracker';
 import DiscordGateway from './DiscordGateway';
 import TokensTracker from './TokensTracker';
 
-const DEEZER_HOSTNAME = 'voiranime.com';
+const VOIRANIME_HOSTNAME = 'v5.voiranime.com';
 const DEEZER_TAB_TITLE_DEBOUNCE_DELAY = 3000;
 const TITLE_SEPARATOR = ' - ';
 
@@ -20,7 +20,7 @@ function formatTabTitle(title) {
 }
 
 /* Track Deezer playing tab title changes */
-const audibleTabTitleTracker = new AudibleTabTitleTracker(DEEZER_HOSTNAME, DEEZER_TAB_TITLE_DEBOUNCE_DELAY);
+const audibleTabTitleTracker = new AudibleTabTitleTracker(VOIRANIME_HOSTNAME, DEEZER_TAB_TITLE_DEBOUNCE_DELAY);
 audibleTabTitleTracker.onCurrentAudibleTabChange = (tabInfos) => {
   let discordGateways = Object.values(tokensDiscordGateways);
   if (discordGateways.length > 0) {

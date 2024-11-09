@@ -4,7 +4,7 @@ class Config {
     this._lastTokenFound = null;
     this._tokensFound = [];
     this._tokensSelection = [];
-    this._notificationsEnabled = true;
+    this._notificationsEnabled = false;
     this._loggingEnabled = true;
   }
   get notificationsEnabled() {
